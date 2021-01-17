@@ -222,11 +222,14 @@ address {
     border-radius: 1.5rem;
     color: #fff;
     font-size: .5rem;
+    letter-spacing: .1rem;
     padding: .5rem 2rem;
     transition: all .3s;
 }
 .newAge .btn.gomb:hover {
-    color: #fdcc52;
+    background-color: #fdcc52;
+    border-color: #fdcc52;
+    color: #444;
 }
 .newAge h1 {
     color: #fff;
@@ -264,11 +267,14 @@ address {
     border-radius: 1.5rem;
     color: #fff;
     font-size: .5rem;
+    letter-spacing: .1rem;
     padding: .5rem 2rem;
     transition: all .3s;
 }
 .stopStart .btn.gomb:hover {
-    color: #fdcc52;
+  background-color: #fdcc52;
+  border-color: #fdcc52;
+  color: #444;
 }
 .stopStart h1 {
     color: #fff;
@@ -377,6 +383,7 @@ address {
   padding: 1rem;
 }
 .modal-header {
+  border-bottom: 1px solid #dee2e6;
   display: flex;
   justify-content: space-between;
 }
