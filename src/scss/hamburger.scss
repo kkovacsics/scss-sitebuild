@@ -88,6 +88,11 @@
 
   /* az "&" jel összefűzi a selectort a parent selectorral */
   &__hamburger {
+    color: rgba(0,0,0,.8);
+
+    &:hover {
+      color:#fdcc52;
+    }
     
     &-checkbox {  // ez eredetileg "&__hamburger-checkbox" volt
       display: none;/* a checkbox nem kell, csak az állapot változásait figyeljük majd CSS-sel */
@@ -99,6 +104,7 @@
 
     &-label {   /* ez a hamburger menu */
       align-items: center;  /* vertikálisan középen */
+      //color: rgba(0,0,0,.8);
       cursor: pointer;   /* mivel menüként/linkként fog működni, klikkelünk rá */
       display: flex;   /* mobilon látszik */
       flex-wrap: wrap;
@@ -113,7 +119,11 @@
 
     &-span {  
       align-items: center;  /* vertikálisan középen */
-      padding: 1rem 0;
+      cursor: pointer;
+      padding: .5rem;
+      margin: .5rem 2rem;
+      border: 1px solid;
+      border-radius: .3rem;
       
       @media screen and (min-width: 992px) {
         display: none;
@@ -121,10 +131,13 @@
     }
 
     &-line {
-      background: modules.$link-color;
+      background: rgba(0,0,0,.7);;
       display: block;
       height: 2px;
       width: 1.5rem;
+      &:hover {
+        background:#fdcc52;
+      }
     }
   }
 }

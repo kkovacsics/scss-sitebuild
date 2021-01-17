@@ -399,6 +399,12 @@ body {
 .nav .nav-scroll .nav__link:hover, .nav .nav-scroll .nav__brand:hover {
   color: #fdcc52;
 }
+.nav__hamburger {
+  color: rgba(0, 0, 0, 0.8);
+}
+.nav__hamburger:hover {
+  color: #fdcc52;
+}
 .nav__hamburger-checkbox {
   display: none;
   /* a checkbox nem kell, csak az állapot változásait figyeljük majd CSS-sel */
@@ -429,7 +435,11 @@ body {
 .nav__hamburger-span {
   align-items: center;
   /* vertikálisan középen */
-  padding: 1rem 0;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0.5rem 2rem;
+  border: 1px solid;
+  border-radius: 0.3rem;
 }
 @media screen and (min-width: 992px) {
   .nav__hamburger-span {
@@ -437,10 +447,13 @@ body {
   }
 }
 .nav__hamburger-line {
-  background: #222;
+  background: rgba(0, 0, 0, 0.7);
   display: block;
   height: 2px;
   width: 1.5rem;
+}
+.nav__hamburger-line:hover {
+  background: #fdcc52;
 }
 
 .modal {
@@ -448,7 +461,7 @@ body {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 10;
   /* Sit on top */
   padding-top: 100px;
   /* Location of the box */
@@ -573,6 +586,22 @@ body {
 
 .ml-3, .mx-3 {
   margin-right: 1rem !important;
+}
+
+.mr-4, .mx-4 {
+  margin-right: 1.5rem !important;
+}
+
+.ml-4, .mx-4 {
+  margin-right: 1.5rem !important;
+}
+
+.mr-5, .mx-5 {
+  margin-right: 3rem !important;
+}
+
+.ml-5, .mx-5 {
+  margin-right: 3rem !important;
 }
 
 .ml-auto, .mx-auto {
@@ -712,7 +741,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 1;
 }
 
 .h-100 {
