@@ -1,0 +1,50 @@
+// YAGNI: "You aren't gonna need it"
+// csak a ...-up mixin-eket fogjuk használni, a többi csak demonstráció :)
+@mixin mobile-down {    // adott töréspontig érvényes
+    @media only screen and (max-width: var(grid-breakpoint-mobile) - 1px){
+        @content;       // @content: a tartalom később módosítható
+    }
+};
+
+
+@mixin mobile-up {      // adott törésponttól érvényes
+    @media only screen and (min-width: var(grid-breakpoint-mobile)){
+        @content;       // @content: a tartalom később módosítható
+    }
+};
+
+@mixin mobile-between-table {      // két töréspont között érvényes
+    @media only screen and (min-width: var(grid-breakpoint-mobile)) and (max-width: var(grid-breakpoint-tablet) - 1px){
+        @content;       // @content: a tartalom később módosítható
+    }
+};
+
+@mixin tablet-down {
+    @media only screen and (max-width: var(grid-breakpoint-tablet) - 1px){
+        @content;       // @content: a tartalom később módosítható
+    }
+};
+
+@mixin tablet-up {
+    @media only screen and (min-width: var(grid-breakpoint-tablet)){
+        @content;       // @content: a tartalom később módosítható
+    }
+};
+
+@mixin tablet-between-desktop {
+    @media only screen and (min-width: var(grid-breakpoint-tablet)) and (max-width: var(grid-breakpoint-desktop) - 1px){
+        @content;       // @content: a tartalom később módosítható
+    }
+};
+
+@mixin desktop-down {
+    @media only screen and (max-width: var(grid-breakpoint-desktop) - 1px){
+        @content;       // @content: a tartalom később módosítható
+    }
+};
+
+@mixin desktop-up {
+    @media only screen and (min-width: var(grid-breakpoint-desktop)){
+        @content;       // @content: a tartalom később módosítható
+    }
+};

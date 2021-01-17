@@ -1,0 +1,15 @@
+// ugyanaz volt, mint a color-palette-s verzió, de itt nem használunk @use-t
+// ezért a globális fv neveket használjuk
+// map.get() >> map-get()
+
+// a grid.css-be van minden importálva, és mivel importálva van, ezért mindenki lát mindent
+// ezért elérjük közvetlenül a _config.scss -ben lévő $config változót is
+@function var($string, $data: $config){
+    $keys: get-keys($string);
+    @each $key in $keys {
+        $data: map-get($data, $key);
+    }
+    @return $data;
+}
+
+// @debug var(container-maxWidth);

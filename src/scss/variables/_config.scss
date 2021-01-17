@@ -1,0 +1,35 @@
+$config: (
+    grid: (
+        size: 12,               // hány oszlop egy sorban
+        breakpoint: (
+            mobile: 640px,
+            tablet: 992px,
+            desktop: 1200px     // 1280px
+        )
+    ),
+    container: (
+        classname: container,
+        maxWidth: 1200px,       // 1280px
+        padding: (
+            default: 5px,
+            mobile: 6px,
+            tablet: 7.5px,
+            desktop: 9px
+        )
+    ),
+    column: (
+        classname: column,
+        postfix: (
+            default: default,   // column--default-12
+            mobile: mobile,     // column--mobile-6
+            tablet: tablet,     // column--tablet-4
+            desktop: desktop    // column--tablet-3
+        ),
+        padding: (
+            default: 10px,
+            mobile: 12px,
+            tablet: 15px,
+            desktop: 18px
+        )
+    )
+);

@@ -1,0 +1,21 @@
+// ugyanaz volt, mint a color-palette-s verzió, de itt nem használunk @use-t
+// ezért a globális fv neveket használjuk
+// string.index() >> str-index()
+// list.append() >> append()
+
+
+@function get-keys($string, $separator: '-'){   // 'theme-red' >> theme, red
+    $keys: ();
+    $index: str-index($string, $separator);
+    @while $index {     // amíg talál elválasztó karaktert
+        $key: str-slice($string, 1, $index - 1);
+        $keys: append($keys, $key);
+        $string: str-slice($string, $index + 1);
+        $index: str-index($string, $separator);
+    }
+    $keys: append($keys, $string); // az utolsó darab
+    // @debug type-of($value: $keys);
+    @return $keys;
+}
+
+// @debug get-keys('hello-na-mi-van');     // "hello" "na" "mi" "van"
